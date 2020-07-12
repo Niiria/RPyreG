@@ -1,9 +1,180 @@
-$primary-color: #3e6f9e;
-$background-color: #dfc2c9;
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   line-height: 1.6em;
+}
+
+body {
+  height: 100vh;
+}
+
+.background {
+  position: absolute;
+  z-index: -1;
+  min-height: 100vh;
+  width: 100%;
+  height: auto;
+}
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  //transition: 0.5s ease-out;
+  transform: translateY(-40px);
+}
+.show {
+  transition: 0.3s ease-in;
+  visibility: visible;
+}
+
+.hiddenS {
+  //visibility: hidden;
+  display: none;
+}
+.showS {
+  display: block;
+}
+
+//******************************************* nav **************************************************
+nav {
+  display: flex;
+  width: 100%;
+  .nav_btn-play {
+    margin: 2em 2em 0 0;
+    height: fit-content;
+  }
+  .logo {
+    height: fit-content;
+  }
+}
+
+.nav_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  padding: 2em 0 0 0;
+
+  li {
+    margin: 0 10px 0 10px;
+    list-style: none;
+    font-size: 1.4em;
+    font-family: 'Fondamento', cursive;
+    min-width: 130px;
+
+    input {
+      background-color: rgb(197, 196, 196);
+      box-shadow: inset 0 0 10px #000000;
+      min-width: 100%;
+      width: inherit;
+      font-size: inherit;
+      font-family: inherit;
+    }
+    input:active {
+      background-color: rgb(107, 8, 8);
+    }
+  }
+}
+
+.nav_btn-list {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr;
+  background-color: #00000080;
+  color: white;
+  padding: 1px 0 0 0;
+  position: relative;
+  z-index: 1;
+
+  li {
+    -webkit-text-stroke: 0.6px black;
+  }
+}
+
+//************************************ Landing *********************************
+
+.landing {
+  height: 1px;
+  /*/******************************* Sorcress ****************************/
+  .Sorcress_anime {
+    width: 20%;
+    transform: translate(80%, 90%);
+    text-align: center;
+
+    .character {
+      color: white;
+      font-size: 2em;
+    }
+    img {
+      width: 100%;
+      transform: scaleX(-1);
+    }
+  }
+
+  .Sorcress_anime:hover {
+    transition: 0.5s ease-in;
+    transform: translate(80%, 80%);
+  }
+  //*************************************** Ranger *************************
+  .Ranger_anime {
+    position: relative;
+    z-index: 1;
+    width: 20%;
+    transform: translate(220%, -40%);
+    text-align: center;
+
+    .character {
+      color: white;
+      font-size: 2em;
+    }
+    img {
+      width: 100%;
+      transform: scaleX(-1);
+    }
+  }
+
+  .Ranger_anime:hover {
+    transition: 0.5s ease;
+    transform: translate(220%, -50%);
+  }
+  //************************************** Warrior *******************
+  .Warrior_anime {
+    width: 20%;
+    transform: translate(180%, -330%);
+    text-align: center;
+
+    .character {
+      color: white;
+      font-size: 2em;
+    }
+    img {
+      width: 100%;
+      transform: scaleX(-1);
+    }
+  }
+
+  .Warrior_anime:hover {
+    transition: 0.5s ease;
+    transform: translate(180%, -340%);
+  }
+  //******************************************* Cleric **********************************
+  .Cleric_anime {
+    width: 20%;
+    transform: translate(350%, -390%);
+    text-align: center;
+
+    .character {
+      color: white;
+      font-size: 2em;
+    }
+    img {
+      width: 60%;
+    }
+  }
+
+  .Cleric_anime:hover {
+    transition: 0.5s ease;
+    transform: translate(350%, -400%);
+  }
 }
