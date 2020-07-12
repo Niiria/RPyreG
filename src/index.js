@@ -1,5 +1,8 @@
 import './styles/main.scss';
 import navListShow from './utils/navListShow';
+import SceneChange from './services/sceneChange';
+
+const LOGO = document.querySelector('.logo');
 
 // import axios from 'axios';
 // const fetchingData = async () => {
@@ -18,4 +21,29 @@ import navListShow from './utils/navListShow';
 
 // const NAV_BTN = document.querySelectorAll('.nav_btn');
 
+// const LOGO = document.querySelector('.logo');
+// const BACKGROUND = document.querySelector('.background');
+// const CHARACTER_SECTION = document.querySelector('.character');
+
+// LOGO.addEventListener('click', (e) => {
+//   BACKGROUND.classList.add('backgroundZoom');
+//   setTimeout(() => {
+//     console.log(CHARACTER_SECTION.classList);
+
+//     CHARACTER_SECTION.classList.remove('hidden');
+//     console.log(CHARACTER_SECTION.classList);
+//     CHARACTER_SECTION.classList.add('show');
+//     console.log(CHARACTER_SECTION.classList);
+//   }, 2000);
+// });
+
+const scene = new SceneChange();
+
 navListShow();
+
+scene.change('landing');
+
+LOGO.addEventListener('click', () => {
+  if (scene.name === 'landing') scene.change('character');
+  else if (scene.name === 'character') scene.change('landing');
+});

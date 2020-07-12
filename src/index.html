@@ -14,18 +14,18 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <img
+  <body class="background">
+    <!-- <img
       class="background"
       src="/src/assests/img/background.jpg"
       alt="background"
-    />
+    /> -->
     <nav>
       <img class="logo" src="/src/assests/img/nav/logo.png" alt="logo" />
       <ul class="nav_list">
         <li>
           <input class="nav_btn" type="button" value="Physical" />
-          <ul class="nav_btn-list hidden">
+          <ul class="nav_btn-list hiddenList">
             <li>Barbarian</li>
             <li>Fighter</li>
             <li>Monk</li>
@@ -33,7 +33,7 @@
         </li>
         <li>
           <input class="nav_btn" type="button" value="Magic" />
-          <ul class="nav_btn-list hidden">
+          <ul class="nav_btn-list hiddenList">
             <li>Sorcerer</li>
             <li>Warlock</li>
             <li>Wizard</li>
@@ -41,7 +41,7 @@
         </li>
         <li>
           <input class="nav_btn" type="button" value="Healer" />
-          <ul class="nav_btn-list hidden">
+          <ul class="nav_btn-list hiddenList">
             <li>Cleric</li>
             <li>Druid</li>
             <li>Paladin</li>
@@ -49,7 +49,7 @@
         </li>
         <li>
           <input class="nav_btn" type="button" value="Ninja" />
-          <ul class="nav_btn-list hidden">
+          <ul class="nav_btn-list hiddenList">
             <li>Ranger</li>
             <li>Rogue</li>
             <li>Bard</li>
@@ -62,36 +62,86 @@
         alt="play"
       />
     </nav>
-    <!--************************* Landing section ***************************-->
+    <!-- Landing section -->
     <section class="landing">
-      <div class="Sorcress_anime">
-        <p class="character">Sorcress</p>
+      <div class="landing_character Sorcress_anime">
+        <p class="landing_character-name hiddenP">Sorcress</p>
         <img
           src="/src/assests/img/characters/Sorcress_anime.png"
           alt="Sorcress_anime"
         />
       </div>
-      <div class="Ranger_anime">
-        <p class="character">Ranger</p>
+      <div class="landing_character Ranger_anime">
+        <p class="landing_character-name hiddenP">Ranger</p>
         <img
           src="/src/assests/img/characters/Ranger_anime.png"
           alt="Ranger_anime"
         />
       </div>
 
-      <div class="Warrior_anime">
+      <div class="landing_character Warrior_anime">
+        <p class="landing_character-name hiddenP">Warrior</p>
         <img
           src="/src/assests/img/characters/Warrior_anime.png"
           alt="Warrior_anime"
         />
-        <p class="character">Warrior</p>
       </div>
-      <div class="Cleric_anime">
-        <p class="character">Cleric</p>
+      <div class="landing_character Cleric_anime">
+        <p class="landing_character-name hiddenP">Cleric</p>
         <img
           src="/src/assests/img/characters/Cleric_anime.png"
           alt="Cleric_anime"
         />
+      </div>
+    </section>
+    <!-- Character Section  -->
+    <section class="characterInfo hidden">
+      <ul class="characterInfo_nav">
+        <li class="characterInfo_change">Ranger</li>
+        <li class="characterInfo_change">Rogue</li>
+        <li class="characterInfo_change">Bard</li>
+      </ul>
+      <hr />
+      <img
+        class="characterInfo_img"
+        src="/src/assests/img/characters/Ranger_anime.png"
+        alt="Ranger_anime"
+      />
+      <div class="characterInfo_main">
+        <div class="characterInfo_description">
+          <h1>Description:</h1>
+          <p class="characterInfo_description-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores,
+            assumenda sit veritatis cumque hic culpa fuga quam delectus nostrum
+          </p>
+        </div>
+        <div>
+          <ul class="characterInfo_main-left">
+            <h3>Priority stats:</h3>
+            <li>
+              <p>Hit points:</p>
+              <p></p>
+            </li>
+            <li>
+              <p>Subclass:</p>
+              <p></p>
+            </li>
+            <li>
+              <p>>Level<</p>
+              <p></p>
+            </li>
+          </ul>
+          <div class="characterInfo_main-right">
+            <h3>proficiences:</h3>
+            <ol>
+              <li>Medium armor</li>
+              <li>Medium armor</li>
+              <li>Medium armor</li>
+              <li>Medium armor</li>
+              <li>Medium armor</li>
+            </ol>
+          </div>
+        </div>
       </div>
     </section>
   </body>
