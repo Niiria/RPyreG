@@ -1,8 +1,10 @@
 import './styles/main.scss';
 import navListShow from './utils/navListShow';
 import SceneChange from './services/sceneChange';
+import CharacterData from './services/characterData';
 
 const LOGO = document.querySelector('.logo');
+const LANDING_CHARACTER_LIST = document.querySelectorAll('.landing_character');
 
 // import axios from 'axios';
 // const fetchingData = async () => {
@@ -38,12 +40,23 @@ const LOGO = document.querySelector('.logo');
 // });
 
 const scene = new SceneChange();
+const data = new CharacterData();
 
 navListShow();
 
 scene.change('landing');
 
 LOGO.addEventListener('click', () => {
-  if (scene.name === 'landing') scene.change('character');
-  else if (scene.name === 'character') scene.change('landing');
+  if (scene.name === 'character') scene.change('landing');
+});
+
+LANDING_CHARACTER_LIST.forEach((character) => {
+  character.addEventListener('click', () => {
+    if (scene.name === 'landing') {
+      scene.change('character');
+      data.fetchData(character.firstElementChild.innerHTML);
+    }
+
+    console.log(character.firstElementChild.innerHTML);
+  });
 });

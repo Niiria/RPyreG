@@ -9,6 +9,7 @@ class SceneChanger {
     );
     if (name === 'character') {
       BACKGROUND.classList.add('backgroundZoom');
+      LANDING.classList.remove('showFlex');
       LANDING.classList.add('hidden');
       setTimeout(() => {
         CHARACTER_INFO_SECTION.classList.remove('hidden');
@@ -22,6 +23,7 @@ class SceneChanger {
         CHARACTER_INFO_SECTION.classList.add('hidden');
         setTimeout(() => {
           LANDING.classList.remove('hidden');
+          LANDING.classList.add('showFlex');
         }, 2000);
       }
 

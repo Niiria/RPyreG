@@ -4,32 +4,21 @@
   padding: 0;
   line-height: 1.6em;
 }
-body {
+body,
+html {
   display: block;
+  height: 100%;
 }
+
 .background {
-  background-image: url(/src/assests/img/background.jpg);
-  background-size: 110%;
-  background-repeat: no-repeat;
-  background-position: top;
-  min-height: 120vh;
-  // width: 100%;
-  // position: absolute;
-  // z-index: -1;
-  // height: auto;
-  // transition: ease 2s;
-  transition: background-size 2s ease-out;
+  height: 100%;
+  background: url(/src/assests/img/background.jpg) no-repeat bottom;
+  background-size: cover;
+  transition: height 2s ease-out;
 }
 .backgroundZoom {
-  overflow: hidden;
-  transition: background-size 2s ease-in;
-  background-position: 80% 0%;
-  background-size: 200%;
-  transition: ease 2s;
-
-  //width: 220%;
-  // height: auto;
-  // transform: translateX(-40%);
+  height: 300%;
+  transition: 2s ease-in;
 }
 
 .hiddenList {
@@ -41,14 +30,18 @@ body {
   transition: 0.3s ease-in;
   visibility: visible;
 }
-
 .hidden {
   display: none;
 }
 .show {
   display: block;
 }
+.showFlex {
+  display: flex;
+}
+
 .hiddenP {
+  opacity: 0;
   visibility: hidden;
 }
 .showP {
@@ -59,7 +52,6 @@ body {
 //******************************************* nav **************************************************
 nav {
   display: flex;
-  width: 100%;
   .nav_btn-play {
     margin: 2em 2em 0 0;
     height: fit-content;
@@ -71,25 +63,24 @@ nav {
 }
 
 .nav_list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-  text-align: center;
-  padding: 2em 0 0 0;
+  padding-top: 2em;
 
-  li {
-    margin: 0 10px 0 10px;
+  .nav_list-li {
+    width: 20%;
+    margin: 0 10px;
     list-style: none;
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-family: 'Fondamento', cursive;
     min-width: 130px;
 
     input {
-      background-color: rgb(197, 196, 196);
+      background-color: #c5c5c5;
       box-shadow: inset 0 0 10px #000000;
       min-width: 100%;
-      width: inherit;
       font-size: inherit;
       font-family: inherit;
     }
@@ -100,95 +91,86 @@ nav {
 }
 
 .nav_btn-list {
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr;
+  position: relative;
+  text-align: center;
+  list-style: none;
+  font-size: 1.4em;
   background-color: #00000080;
   color: white;
-  padding: 1px 0 0 0;
-  position: relative;
   z-index: 1;
   cursor: pointer;
 
   li {
-    -webkit-text-stroke: 0.6px black;
+    -webkit-text-stroke: 1px black;
   }
 }
 
 //************************************ Landing *********************************
-.landing_character-name {
-  color: white;
-  font-size: 2em;
-}
-
 .landing {
-  cursor: pointer;
-  height: 1px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 300px;
+  justify-content: space-between;
+  align-items: flex-end;
 
-  /*/******************************* Sorcress ****************************/
-  .Sorcress_anime {
-    width: 20%;
-    transform: translate(80%, 90%);
+  .landing_character-name {
     text-align: center;
-    img {
-      width: 100%;
-      transform: scaleX(-1);
-    }
+    -webkit-text-stroke: 2px black;
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
   }
+
+  img {
+    min-width: 200px;
+    width: 80%;
+    max-width: 300px;
+    transform: scaleX(-1);
+  }
+
+  //************************************ Sorcress ****************************
+
   .Sorcress_anime:hover {
+    cursor: pointer;
     transition: 0.5s ease-in;
-    transform: translate(80%, 80%);
+    transform: translateY(-10%);
   }
-  //*************************************** Ranger *************************
-  .Ranger_anime {
-    z-index: 1;
-    width: 20%;
-    transform: translate(220%, -40%);
-    text-align: center;
-    img {
-      width: 100%;
-      transform: scaleX(-1);
-    }
-  }
+  //************************************** Ranger ******************************
 
   .Ranger_anime:hover {
+    cursor: pointer;
+    transform: translateY(-10%);
     transition: 0.5s ease;
-    transform: translate(220%, -50%);
   }
-  //************************************** Warrior *******************
+  //************************************** Warrior *****************************
   .Warrior_anime {
-    width: 20%;
-    transform: translate(200%, -350%);
-    text-align: center;
     img {
-      width: 100%;
-      transform: scaleX(-1);
+      min-width: 300px;
+      width: 130%;
+      max-width: 370px;
     }
   }
 
   .Warrior_anime:hover {
+    cursor: pointer;
     transition: 0.5s ease;
-    transform: translate(200%, -360%);
+    transform: translateY(-10%);
   }
-  //******************************************* Cleric **********************************
-  .Cleric_anime {
-    width: 20%;
-    transform: translate(350%, -390%);
-    text-align: center;
-    img {
-      width: 60%;
-    }
-  }
+  //**************************************** Cleric ************************
 
   .Cleric_anime:hover {
+    cursor: pointer;
     transition: 0.5s ease;
-    transform: translate(350%, -400%);
+    transform: translateY(-10%);
   }
 }
+
 //*********************************** character ***********************
 .characterInfo {
   margin: 0 10% 0 10%;
-  background-color: #00000040;
+  background-color: #00000050;
 
   .characterInfo_img {
     position: absolute;
