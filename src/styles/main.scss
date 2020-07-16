@@ -48,6 +48,9 @@ html {
   visibility: visible;
   transition: 0.3s ease-in;
 }
+.underlineCharacterNav {
+  text-decoration: underline solid red 1px;
+}
 
 //******************************************* nav **************************************************
 nav {
@@ -92,12 +95,13 @@ nav {
 
 .nav_btn-list {
   position: relative;
+  z-index: 1;
   text-align: center;
   list-style: none;
   font-size: 1.4em;
   background-color: #00000080;
   color: white;
-  z-index: 1;
+
   cursor: pointer;
 
   li {
@@ -110,7 +114,6 @@ nav {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  padding-top: 300px;
   justify-content: space-between;
   align-items: flex-end;
 
@@ -146,6 +149,10 @@ nav {
   }
   //************************************** Warrior *****************************
   .Warrior_anime {
+    p {
+      text-align: right;
+    }
+
     img {
       min-width: 300px;
       width: 130%;
@@ -170,21 +177,27 @@ nav {
 //*********************************** character ***********************
 .characterInfo {
   margin: 0 10% 0 10%;
-  background-color: #00000050;
+  background-color: #00000080;
 
   .characterInfo_img {
-    position: absolute;
-    width: 25%;
-    transform: translate(-10%, 0%) scaleX(-1);
+    width: 80%;
+    max-width: 400px;
+
+    // transform: translate(-10%, 0%) scaleX(-1);
   }
   .characterInfo_nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-evenly;
     text-align: center;
     list-style: none;
-    font-size: 3em;
+    font-size: 3.5em;
     font-weight: 900;
     font-family: 'Fondamento', cursive;
+    li:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+      -webkit-text-stroke: 0.2px red;
+    }
   }
   hr {
     border: 2px solid black;
@@ -192,35 +205,47 @@ nav {
   }
 }
 .characterInfo_main {
-  margin-left: 40%;
-  .characterInfo_description {
+  display: flex;
+  //margin-left: 40%;
+  font-size: 1.7em;
+  color: white;
+  -webkit-text-stroke: 1.5px black;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .characterInfo_main-text {
     display: flex;
+    text-align: center;
     flex-direction: column;
-    text-align: center;
-    font-size: 1.6em;
-    color: white;
-    margin-bottom: 20px;
-  }
-  div {
-    display: flex;
-    text-align: center;
-    justify-content: space-evenly;
+    .characterInfo_description {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .characterInfo_main-info {
+      display: flex;
+    }
   }
 }
 .characterInfo_main-left {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  font-size: 1.6em;
-  color: white;
-  align-items: center;
+  margin: 0 auto;
+
   li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
     margin-top: 10px;
   }
 }
 .characterInfo_main-right {
-  font-size: 1.6em;
-  color: white;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  li {
+    list-style: none;
+  }
 }
