@@ -9,13 +9,11 @@ const getCharacter = () => {
       character.previousElementSibling.classList.remove('showP');
       character.previousElementSibling.classList.add('hiddenP');
     });
-    character.addEventListener('click', () => {
-      console.log('Dziala');
-
-      return character.previousElementSibling.innerHTML;
-    });
+    character.addEventListener(
+      'click',
+      () => character.previousElementSibling.innerHTML
+    );
   });
-  return 2;
 };
 
 export default getCharacter;

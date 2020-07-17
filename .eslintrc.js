@@ -10,10 +10,11 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
-    'linebreak-style': ['error', 'windows'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'no-console': 'error',
-    'comma-dangle': ['error', 'never'],
+    'linebreak-style': ['error', 'windows'],
+    'comma-dangle': 'off',
+    'operator-linebreak': 'off',
   },
 };
