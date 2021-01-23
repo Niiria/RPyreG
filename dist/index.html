@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPyreG</title>
+    <link rel="icon" type="image/png" href="/src/assests/img/icon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="background">
+      <nav>
+        <img class="logo" src="/src/assests/img/nav/logo.png" alt="logo" />
+        <ul class="nav">
+          <li class="nav_category">
+            <input class="nav_btn" type="button" value="Physical" />
+            <ul id="Fighter" class="nav_category-expand hiddenList">
+              <li>Barbarian</li>
+              <li>Fighter</li>
+              <li>Monk</li>
+            </ul>
+          </li>
+          <li class="nav_category">
+            <input class="nav_btn" type="button" value="Magic" />
+            <ul id="Sorcerer" class="nav_category-expand hiddenList">
+              <li>Sorcerer</li>
+              <li>Warlock</li>
+              <li>Wizard</li>
+            </ul>
+          </li>
+          <li class="nav_category">
+            <input class="nav_btn" type="button" value="Healer" />
+            <ul id="Cleric" class="nav_category-expand hiddenList">
+              <li>Cleric</li>
+              <li>Druid</li>
+              <li>Paladin</li>
+            </ul>
+          </li>
+          <li class="nav_category">
+            <input class="nav_btn" type="button" value="Ninja" />
+            <ul id="Ranger" class="nav_category-expand hiddenList">
+              <li>Ranger</li>
+              <li>Rogue</li>
+              <li>Bard</li>
+            </ul>
+          </li>
+        </ul>
+        <img
+          class="nav_btn-play"
+          src="/src/assests/img/nav/play.png"
+          alt="play"
+        />
+      </nav>
+      <!-- Landing section showFlex-->
+      <section class="landing showFlex">
+        <div class="landing_character Ranger_anime">
+          <p class="landing_character-name hiddenP">Ranger</p>
+          <img
+            src="/src/assests/img/characters/Ranger_anime.png"
+            alt="Ranger_anime"
+          />
+        </div>
+
+        <div class="landing_character Warrior_anime">
+          <p class="landing_character-name hiddenP">Fighter</p>
+          <img
+            src="/src/assests/img/characters/Fighter_anime.png"
+            alt="Warrior_anime"
+          />
+        </div>
+        <div class="landing_character Sorcress_anime">
+          <p class="landing_character-name hiddenP">Sorcerer</p>
+          <img
+            src="/src/assests/img/characters/Sorcerer_anime.png"
+            alt="Sorcress_anime"
+          />
+        </div>
+        <div class="landing_character Cleric_anime">
+          <p class="landing_character-name hiddenP">Cleric</p>
+          <img
+            src="/src/assests/img/characters/Cleric_anime.png"
+            alt="Cleric_anime"
+          />
+        </div>
+      </section>
+      <!-- Character Section hidden -->
+      <section class="character hidden">
+        <ul class="character_nav">
+          <li>Ranger</li>
+          <li>Rogue</li>
+          <li>Bard</li>
+        </ul>
+        <hr />
+
+        <div class="character_main">
+          <img
+            class="character_img"
+            src="/src/assests/img/characters/Ranger_anime.png"
+            alt="Ranger_anime"
+          />
+          <!-- Character Info section show -->
+          <section class="character_main-text show">
+            <div class="character_description">
+              <h1>Description:</h1>
+              <p class="character_description-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maiores, assumenda sit veritatis cumque hic culpa fuga quam
+                delectus nostrum
+              </p>
+            </div>
+            <div class="character_main-info">
+              <div class="character_main-left">
+                <h3>Priority stats:</h3>
+                <ul class="character_main-left-list">
+                  <li>
+                    <p>Hit points:</p>
+                    <p class="character_main-left-hitPoints"></p>
+                  </li>
+                  <li>
+                    <p>Subclass:</p>
+                    <p class="character_main-left-subclass"></p>
+                  </li>
+                  <li>
+                    <p class="character_main-level">>Level<</p>
+                    <p></p>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="character_main-right">
+                <h3>proficiences:</h3>
+                <ul class="character_main-right-list"></ul>
+              </div>
+            </div>
+          </section>
+          <!-- Character level section hidden -->
+          <section class="character_main-levels hidden">
+            <div>
+              <ul class="character_main-levels-info">
+                <li>
+                  <h2>Level:</h2>
+                  <h2 class="character_main-levels-Level"></h2>
+                </li>
+                <li>
+                  <p>Proffesion bonus:</p>
+                  <p class="character_main-levels-profession"></p>
+                </li>
+                <li>
+                  <p>Features:</p>
+                </li>
+                <li>
+                  <p class="character_main-levels-features"></p>
+                </li>
+              </ul>
+              <ul class="character_main-levels-list"></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+  <script src="main.js"></script></body>
+</html>
